@@ -10,7 +10,8 @@ My tracking algorithm to sample and track an arbitrary number of points from a s
 
 ## The Algorithm
 
-![depth_tracking](https://user-images.githubusercontent.com/45127463/162577308-54a53224-65d4-4179-917c-55fb73ffb512.png)
+![depth_tracking_pipeline_2](https://user-images.githubusercontent.com/45127463/162616975-c5e60902-ce9e-4c49-9223-514610cc3dc6.svg)
+
 
 The algorithm mainly relies on optical flow, and namely the `cv.jit.track` object. It creates a silhouette from the depth map, radially downsamples it to N points and feeds that to `cv.jit.track`. For the active points it outputs the coordinates (in both spat5 and gl formats) and automatically reassigns lost points.
 
